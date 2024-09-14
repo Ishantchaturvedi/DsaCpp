@@ -1,38 +1,20 @@
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
+
 using namespace std;
 
-int main(){
+int main() {
+    vector<int> vec;
+    vec.push_back(25);
+    vec.push_back(35);
+    vec.push_back(45);
 
-    vector<int> v;
-    v.push_back(1);
-    v.push_back(2);
-    v.push_back(3);
+    cout << "after push back size = " << vec.size() << endl;
+    
+    vec.pop_back();
 
-
-    for(int i=0;i<v.size();i++){
-        cout<<v[i]<<endl;
-    }
-
-    vector<int>::iterator it;
-    for(it=v.begin();it!=v.end();it++){
-        cout<<*it<<endl;
-    }
-
-    for(auto element:v){
-        cout<<element<<endl;
-    }
-
-    v.pop_back();
-
-    vector<int> v2 (3,50);
-
-    swap(v,v2);
-    for(auto element:v){
-        cout<<element<<endl;
-    }
-    for(auto element:v2){
-        cout<<element<<endl;
+    for(int val : vec) {
+        cout << val << endl;
     }
     return 0;
 }
